@@ -1,0 +1,3 @@
+= ytec_hacks_public
+
+Some hacks for improving Redmine
