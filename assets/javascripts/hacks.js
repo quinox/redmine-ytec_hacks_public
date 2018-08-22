@@ -1,6 +1,18 @@
 /* global $ */
 
 /*
+ * Replace >> characters in project dropdowns with empty indentation, to allow search as you type.
+ */
+$(document).ready(function() {
+  var PROJECT_OPTIONS_SELECTOR = '#project_quick_jump_box > option, #issue_project_id > option';
+
+  $(PROJECT_OPTIONS_SELECTOR).each(function(i, el) {
+    var $this = $(this);
+    $this.html($this.text().replace('»', '&nbsp;&nbsp;'));
+  });
+});
+
+/*
  * Wrap pasted stacktraces in a <pre><code> block
  *
  */
